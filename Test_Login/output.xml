@@ -1,67 +1,518 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.4 on win32)" generated="20240627 14:38:08.729" rpa="false" schemaversion="3">
-<suite id="s1" name="TestLoginIncompletePassword" source="C:\Users\User\Desktop\Final_Project\test_H2OProject\Test_Login\TestLoginIncompletePassword.robot">
-<test id="s1-t1" name="Open Browser And Navigate To URL" line="9">
+<robot generator="Robot 6.0.2 (Python 3.11.4 on win32)" generated="20240701 16:51:04.171" rpa="false" schemaversion="3">
+<suite id="s1" name="TestLoginAll" source="C:\Users\User\Desktop\Final_Project\test_H2OProject\Test_Login\TestLoginAll.robot">
+<test id="s1-t1" name="Login by Keyword TC01" line="10">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20240627 14:38:09.009" level="INFO">Opening browser 'Edge' to base url 'http://localhost:5173'.</msg>
-<msg timestamp="20240627 14:38:09.025" level="INFO">Executing: C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser edge --output json</msg>
-<status status="PASS" starttime="20240627 14:38:09.008" endtime="20240627 14:38:13.740"/>
+<msg timestamp="20240701 16:51:04.355" level="INFO">Opening browser 'Edge' to base url 'http://localhost:5173'.</msg>
+<msg timestamp="20240701 16:51:04.364" level="INFO">Executing: C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser edge --output json</msg>
+<status status="PASS" starttime="20240701 16:51:04.354" endtime="20240701 16:51:07.716"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20240627 14:38:13.741" endtime="20240627 14:38:13.815"/>
+<status status="PASS" starttime="20240701 16:51:07.717" endtime="20240701 16:51:07.763"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css=.bg-blue-500</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240627 14:38:13.817" level="INFO">Clicking element 'css=.bg-blue-500'.</msg>
-<status status="PASS" starttime="20240627 14:38:13.815" endtime="20240627 14:38:13.937"/>
+<msg timestamp="20240701 16:51:07.764" level="INFO">Clicking element 'css=.bg-blue-500'.</msg>
+<status status="PASS" starttime="20240701 16:51:07.763" endtime="20240701 16:51:07.831"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240701 16:51:09.834" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240701 16:51:07.832" endtime="20240701 16:51:09.834"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>guy.guy0205245@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240701 16:51:09.835" level="INFO">Typing text 'guy.guy0205245@gmail.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20240701 16:51:09.835" endtime="20240701 16:51:09.914"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240701 16:51:11.914" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240701 16:51:09.914" endtime="20240701 16:51:11.914"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>Guyzapan</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240701 16:51:11.914" level="INFO">Typing text 'Guyzapan' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20240701 16:51:11.914" endtime="20240701 16:51:11.971"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240701 16:51:13.972" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240701 16:51:11.971" endtime="20240701 16:51:13.972"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=.border-white:nth-child(1)</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240701 16:51:13.975" level="INFO">Clicking element 'css=.border-white:nth-child(1)'.</msg>
+<status status="PASS" starttime="20240701 16:51:13.973" endtime="20240701 16:51:14.042"/>
+</kw>
+<doc>ทดสอบการ Login</doc>
+<status status="PASS" starttime="20240701 16:51:04.352" endtime="20240701 16:51:14.043"/>
+</test>
+<test id="s1-t2" name="Login by Keyword TC02" line="23">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240701 16:51:14.046" level="INFO">Opening browser 'Edge' to base url 'http://localhost:5173'.</msg>
+<msg timestamp="20240701 16:51:14.052" level="INFO">Executing: C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser edge --output json</msg>
+<status status="PASS" starttime="20240701 16:51:14.045" endtime="20240701 16:51:18.630"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240701 16:51:18.631" endtime="20240701 16:51:18.674"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=.bg-blue-500</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240701 16:51:18.675" level="INFO">Clicking element 'css=.bg-blue-500'.</msg>
+<status status="PASS" starttime="20240701 16:51:18.674" endtime="20240701 16:51:18.734"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240701 16:51:20.736" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240701 16:51:18.735" endtime="20240701 16:51:20.736"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name=email</arg>
 <arg>guy.guy020524@gmail.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240627 14:38:13.939" level="INFO">Typing text 'guy.guy020524@gmail.com' into text field 'name=email'.</msg>
-<status status="PASS" starttime="20240627 14:38:13.938" endtime="20240627 14:38:14.194"/>
+<msg timestamp="20240701 16:51:20.736" level="INFO">Typing text 'guy.guy020524@gmail.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20240701 16:51:20.736" endtime="20240701 16:51:20.849"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240701 16:51:22.850" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240701 16:51:20.850" endtime="20240701 16:51:22.850"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>Guyzapan</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240701 16:51:22.853" level="INFO">Typing text 'Guyzapan' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20240701 16:51:22.852" endtime="20240701 16:51:22.943"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240701 16:51:24.945" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240701 16:51:22.943" endtime="20240701 16:51:24.945"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=.border-white:nth-child(1)</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240701 16:51:24.948" level="INFO">Clicking element 'css=.border-white:nth-child(1)'.</msg>
+<status status="PASS" starttime="20240701 16:51:24.947" endtime="20240701 16:51:24.994"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[2]/div</arg>
+<arg>Invalid email or password!</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20240701 16:51:24.995" endtime="20240701 16:51:25.232"/>
+</kw>
+<doc>ทดสอบการ Login แบบอีเมลไม่ตรง</doc>
+<status status="PASS" starttime="20240701 16:51:14.045" endtime="20240701 16:51:25.233"/>
+</test>
+<test id="s1-t3" name="Login by Keyword TC03" line="36">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240701 16:51:25.237" level="INFO">Opening browser 'Edge' to base url 'http://localhost:5173'.</msg>
+<msg timestamp="20240701 16:51:25.243" level="INFO">Executing: C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser edge --output json</msg>
+<status status="PASS" starttime="20240701 16:51:25.236" endtime="20240701 16:51:29.859"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240701 16:51:29.860" endtime="20240701 16:51:29.890"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=.bg-blue-500</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240701 16:51:29.892" level="INFO">Clicking element 'css=.bg-blue-500'.</msg>
+<status status="PASS" starttime="20240701 16:51:29.891" endtime="20240701 16:51:29.986"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240701 16:51:31.987" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240701 16:51:29.986" endtime="20240701 16:51:31.987"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>guy.guy0205245@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240701 16:51:31.988" level="INFO">Typing text 'guy.guy0205245@gmail.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20240701 16:51:31.987" endtime="20240701 16:51:32.124"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240701 16:51:34.125" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240701 16:51:32.124" endtime="20240701 16:51:34.125"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>Guyzapa112</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240701 16:51:34.127" level="INFO">Typing text 'Guyzapa112' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20240701 16:51:34.126" endtime="20240701 16:51:34.198"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240701 16:51:36.199" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240701 16:51:34.198" endtime="20240701 16:51:36.199"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=.border-white:nth-child(1)</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240701 16:51:36.200" level="INFO">Clicking element 'css=.border-white:nth-child(1)'.</msg>
+<status status="PASS" starttime="20240701 16:51:36.200" endtime="20240701 16:51:36.242"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[2]/div</arg>
+<arg>Invalid email or password!</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20240701 16:51:36.243" endtime="20240701 16:51:36.477"/>
+</kw>
+<doc>ทดสอบการ Login แบบรหัสไม่ตรง</doc>
+<status status="PASS" starttime="20240701 16:51:25.235" endtime="20240701 16:51:36.477"/>
+</test>
+<test id="s1-t4" name="Login by Keyword TC04" line="49">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240701 16:51:36.480" level="INFO">Opening browser 'Edge' to base url 'http://localhost:5173'.</msg>
+<msg timestamp="20240701 16:51:36.486" level="INFO">Executing: C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser edge --output json</msg>
+<status status="PASS" starttime="20240701 16:51:36.479" endtime="20240701 16:51:41.151"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240701 16:51:41.152" endtime="20240701 16:51:41.197"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=.bg-blue-500</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240701 16:51:41.198" level="INFO">Clicking element 'css=.bg-blue-500'.</msg>
+<status status="PASS" starttime="20240701 16:51:41.197" endtime="20240701 16:51:41.253"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240701 16:51:43.254" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240701 16:51:41.254" endtime="20240701 16:51:43.254"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>guy.guy0205245!gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240701 16:51:43.256" level="INFO">Typing text 'guy.guy0205245!gmail.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20240701 16:51:43.255" endtime="20240701 16:51:43.409"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240701 16:51:45.411" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240701 16:51:43.410" endtime="20240701 16:51:45.411"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>Guyzapan</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240701 16:51:45.413" level="INFO">Typing text 'Guyzapan' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20240701 16:51:45.412" endtime="20240701 16:51:45.489"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240701 16:51:47.489" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240701 16:51:45.489" endtime="20240701 16:51:47.489"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=.border-white:nth-child(1)</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240701 16:51:47.489" level="INFO">Clicking element 'css=.border-white:nth-child(1)'.</msg>
+<status status="PASS" starttime="20240701 16:51:47.489" endtime="20240701 16:51:47.549"/>
+</kw>
+<doc>ทดสอบการ Login แบบไม่ใส่ @</doc>
+<status status="PASS" starttime="20240701 16:51:36.478" endtime="20240701 16:51:47.550"/>
+</test>
+<test id="s1-t5" name="Login by Keyword TC05" line="62">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240701 16:51:47.552" level="INFO">Opening browser 'Edge' to base url 'http://localhost:5173'.</msg>
+<msg timestamp="20240701 16:51:47.564" level="INFO">Executing: C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser edge --output json</msg>
+<status status="PASS" starttime="20240701 16:51:47.551" endtime="20240701 16:51:52.860"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240701 16:51:52.863" endtime="20240701 16:51:52.918"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=.bg-blue-500</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240701 16:51:52.920" level="INFO">Clicking element 'css=.bg-blue-500'.</msg>
+<status status="PASS" starttime="20240701 16:51:52.919" endtime="20240701 16:51:52.987"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>guy.guy020524@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240701 16:51:52.989" level="INFO">Typing text 'guy.guy020524@gmail.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20240701 16:51:52.987" endtime="20240701 16:51:53.140"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name=password</arg>
 <arg>Guyza</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240627 14:38:14.196" level="INFO">Typing text 'Guyza' into text field 'name=password'.</msg>
-<status status="PASS" starttime="20240627 14:38:14.195" endtime="20240627 14:38:14.308"/>
+<msg timestamp="20240701 16:51:53.141" level="INFO">Typing text 'Guyza' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20240701 16:51:53.141" endtime="20240701 16:51:53.302"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css=.border-white:nth-child(1)</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240627 14:38:14.309" level="INFO">Clicking element 'css=.border-white:nth-child(1)'.</msg>
-<status status="PASS" starttime="20240627 14:38:14.309" endtime="20240627 14:38:14.450"/>
+<msg timestamp="20240701 16:51:53.302" level="INFO">Clicking element 'css=.border-white:nth-child(1)'.</msg>
+<status status="PASS" starttime="20240701 16:51:53.302" endtime="20240701 16:51:53.390"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>class=card-body</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240627 14:38:14.450" endtime="20240627 14:38:14.708"/>
+<doc>ทดสอบการ Login แบบรหัสไม่ถึง 8</doc>
+<status status="PASS" starttime="20240701 16:51:47.550" endtime="20240701 16:51:53.390"/>
+</test>
+<test id="s1-t6" name="Login by Keyword TC06" line="74">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240701 16:51:53.392" level="INFO">Opening browser 'Edge' to base url 'http://localhost:5173'.</msg>
+<msg timestamp="20240701 16:51:53.408" level="INFO">Executing: C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser edge --output json</msg>
+<status status="PASS" starttime="20240701 16:51:53.392" endtime="20240701 16:52:00.132"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240701 16:52:00.134" endtime="20240701 16:52:00.245"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=.bg-blue-500</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240701 16:52:00.248" level="INFO">Clicking element 'css=.bg-blue-500'.</msg>
+<status status="PASS" starttime="20240701 16:52:00.247" endtime="20240701 16:52:00.358"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240701 16:52:02.362" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240701 16:52:00.360" endtime="20240701 16:52:02.362"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>guy.guy0205245@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240701 16:52:02.366" level="INFO">Typing text 'guy.guy0205245@gmail.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20240701 16:52:02.363" endtime="20240701 16:52:02.573"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240701 16:52:04.576" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240701 16:52:02.574" endtime="20240701 16:52:04.576"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=.border-white:nth-child(1)</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240701 16:52:04.577" level="INFO">Clicking element 'css=.border-white:nth-child(1)'.</msg>
+<status status="PASS" starttime="20240701 16:52:04.576" endtime="20240701 16:52:04.675"/>
+</kw>
+<doc>ทดสอบการ Login แบบไม่ใส่รหัสผ่าน</doc>
+<status status="PASS" starttime="20240701 16:51:53.391" endtime="20240701 16:52:04.675"/>
+</test>
+<test id="s1-t7" name="Login by Keyword TC07" line="85">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240701 16:52:04.677" level="INFO">Opening browser 'Edge' to base url 'http://localhost:5173'.</msg>
+<msg timestamp="20240701 16:52:04.695" level="INFO">Executing: C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser edge --output json</msg>
+<status status="PASS" starttime="20240701 16:52:04.677" endtime="20240701 16:52:11.339"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240701 16:52:11.339" endtime="20240701 16:52:11.583"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=.bg-blue-500</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240701 16:52:11.590" level="INFO">Clicking element 'css=.bg-blue-500'.</msg>
+<status status="PASS" starttime="20240701 16:52:11.589" endtime="20240701 16:52:11.774"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240701 16:52:13.777" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240701 16:52:11.775" endtime="20240701 16:52:13.777"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>Guyza</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240701 16:52:13.782" level="INFO">Typing text 'Guyza' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20240701 16:52:13.780" endtime="20240701 16:52:14.016"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240701 16:52:16.017" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240701 16:52:14.017" endtime="20240701 16:52:16.017"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=.border-white:nth-child(1)</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240701 16:52:16.020" level="INFO">Clicking element 'css=.border-white:nth-child(1)'.</msg>
+<status status="PASS" starttime="20240701 16:52:16.018" endtime="20240701 16:52:16.236"/>
+</kw>
+<doc>ทดสอบการ Login แบบไม่ใส่ อีเมล</doc>
+<status status="PASS" starttime="20240701 16:52:04.676" endtime="20240701 16:52:16.238"/>
+</test>
+<test id="s1-t8" name="Login by Keyword TC08" line="96">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240701 16:52:16.250" level="INFO">Opening browser 'Edge' to base url 'http://localhost:5173'.</msg>
+<msg timestamp="20240701 16:52:16.282" level="INFO">Executing: C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser edge --output json</msg>
+<status status="PASS" starttime="20240701 16:52:16.247" endtime="20240701 16:52:23.170"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240701 16:52:23.171" endtime="20240701 16:52:23.332"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=.bg-blue-500</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240701 16:52:23.336" level="INFO">Clicking element 'css=.bg-blue-500'.</msg>
+<status status="PASS" starttime="20240701 16:52:23.334" endtime="20240701 16:52:23.536"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240701 16:52:25.538" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240701 16:52:23.536" endtime="20240701 16:52:25.538"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=.border-white:nth-child(1)</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240701 16:52:25.542" level="INFO">Clicking element 'css=.border-white:nth-child(1)'.</msg>
+<status status="PASS" starttime="20240701 16:52:25.539" endtime="20240701 16:52:25.753"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240701 16:52:27.756" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240701 16:52:25.754" endtime="20240701 16:52:27.756"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240701 16:52:27.756" endtime="20240701 16:52:30.311"/>
+</kw>
+<doc>ทดสอบการ Login แบบ Emtry</doc>
+<status status="PASS" starttime="20240701 16:52:16.243" endtime="20240701 16:52:30.312"/>
+</test>
+<test id="s1-t9" name="Login by Keyword TC09" line="107">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240701 16:52:30.319" level="INFO">Opening browser 'Edge' to base url 'http://localhost:5173'.</msg>
+<msg timestamp="20240701 16:52:30.341" level="INFO">Executing: C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser edge --output json</msg>
+<status status="PASS" starttime="20240701 16:52:30.318" endtime="20240701 16:52:37.149"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${TestCase}</var>
+<arg>TS1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240701 16:52:37.156" level="INFO">${TestCase} = TS1</msg>
+<status status="PASS" starttime="20240701 16:52:37.154" endtime="20240701 16:52:37.156"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div[3]/div[1]/nav/div/div[1]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240701 16:52:37.159" level="INFO">Clicking element '//*[@id="root"]/div[3]/div[1]/nav/div/div[1]/button'.</msg>
+<status status="PASS" starttime="20240701 16:52:37.157" endtime="20240701 16:52:37.302"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Username}</var>
+<arg>Supphalak.sp@gmail.com</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240701 16:52:37.303" level="INFO">${Username} = Supphalak.sp@gmail.com</msg>
+<status status="PASS" starttime="20240701 16:52:37.302" endtime="20240701 16:52:37.303"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Password}</var>
+<arg>12345678</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240701 16:52:37.304" level="INFO">${Password} = 12345678</msg>
+<status status="PASS" starttime="20240701 16:52:37.303" endtime="20240701 16:52:37.304"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240701 16:52:37.306" level="INFO">Typing text 'Supphalak.sp@gmail.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20240701 16:52:37.304" endtime="20240701 16:52:37.669"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240701 16:52:37.670" level="INFO">Typing text '12345678' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20240701 16:52:37.670" endtime="20240701 16:52:37.871"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="Get-Started"]/div/form/div[4]/input</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240701 16:52:37.872" level="INFO">Clicking element '//*[@id="Get-Started"]/div/form/div[4]/input'.</msg>
+<status status="PASS" starttime="20240701 16:52:37.872" endtime="20240701 16:52:38.001"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>xpath=//*[@id="Modal-SelectRoles"]/div/div/h1</arg>
+<arg>What do you want to log in as?</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20240701 16:52:38.002" endtime="20240701 16:52:38.309"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20240627 14:38:15.237" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-27.png"&gt;&lt;img src="selenium-screenshot-27.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20240627 14:38:14.709" endtime="20240627 14:38:15.237"/>
+<msg timestamp="20240701 16:52:38.759" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-29.png"&gt;&lt;img src="selenium-screenshot-29.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240701 16:52:38.310" endtime="20240701 16:52:38.759"/>
 </kw>
-<status status="PASS" starttime="20240627 14:38:09.007" endtime="20240627 14:38:15.240"/>
+<doc>ทดสอบการ Login แบบมากกว่า 1 roles</doc>
+<status status="PASS" starttime="20240701 16:52:30.316" endtime="20240701 16:52:38.761"/>
 </test>
-<status status="PASS" starttime="20240627 14:38:08.730" endtime="20240627 14:38:15.243"/>
+<status status="PASS" starttime="20240701 16:51:04.172" endtime="20240701 16:52:38.769"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="9" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="TestLoginIncompletePassword">TestLoginIncompletePassword</stat>
+<stat pass="9" fail="0" skip="0" id="s1" name="TestLoginAll">TestLoginAll</stat>
 </suite>
 </statistics>
 <errors>
