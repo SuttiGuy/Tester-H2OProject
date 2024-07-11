@@ -12,8 +12,9 @@ Open Browser And Navigate To URL
     Click Element    css=.bg-blue-500 
     Sleep    ${DELAY}
     Input Text    name=email    guy.guy0205245@gmail.com
-    Sleep    ${DELAY}
     Click Element    css=.border-white:nth-child(1)
+    Mouse Over    css=.inline-block
+    Wait Until Element Is Visible    xpath=//*[@id="Get-Started"]/div/form/div[2]/label/div/span   timeout=10s
+    Element Should Be Visible    xpath=//*[@id="Get-Started"]/div/form/div[2]/label/div/span    Please enter a password
     Capture Page Screenshot
-    # Add more test steps here if needed
-    # Close Browser    # Close the browser after the test completes
+    Close Browser

@@ -13,9 +13,9 @@ Open Browser And Navigate To URL
     Sleep    ${DELAY}
     Input Text    name=email    guy.guy0205245@gmail.com
     Sleep    ${DELAY}
-    Input Text    name=password    Guyzapan
+    Input Text    name=password    Guyza123!
     Sleep    ${DELAY}
     Click Element    css=.border-white:nth-child(1)
+    Wait Until Element Is Visible    xpath=//*[@id="avatarButton"]    timeout=10s
+    Element Should Be Visible    xpath=//*[@id="avatarButton"]
     Capture Page Screenshot
-    # Add more test steps here if needed
-    # Close Browser    # Close the browser after the test completes

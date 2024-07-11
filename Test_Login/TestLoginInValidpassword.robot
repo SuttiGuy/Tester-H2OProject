@@ -13,10 +13,10 @@ Open Browser And Navigate To URL
     Sleep    ${DELAY}
     Input Text    name=email    guy.guy0205245@gmail.com
     Sleep    ${DELAY}
-    Input Text    name=password    Guyzapa112
+    Input Text    name=password    Guyzapa112!
     Sleep    ${DELAY}
     Click Element    css=.border-white:nth-child(1)
-      Wait Until Element Contains    xpath=/html/body/div[2]/div    Invalid email or password!
+    Wait Until Element Contains    xpath=/html/body/div[2]/div    Invalid Password!
     Capture Page Screenshot
     # Add more test steps here if needed
     # Close Browser    # Close the browser after the test completes
