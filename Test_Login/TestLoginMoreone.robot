@@ -24,6 +24,9 @@ Login success
     Sleep    2s
     Click Element    xpath=//dialog[@id='Modal-SelectRoles']/div/button[4]/span/div/h3
     Sleep    5s
+    Wait Until Element Is Visible    xpath=//*[@id="avatarButton"]    timeout=10s
+    Element Should Be Visible    xpath=//*[@id="avatarButton"]   
+    Sleep    ${DELAY}
     Capture Screenshot
     Close Browser
 

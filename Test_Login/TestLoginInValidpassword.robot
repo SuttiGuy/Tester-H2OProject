@@ -5,7 +5,7 @@ Library    OperatingSystem
 *** Variables ***
 ${BROWSER}         Edge
 ${URL}             http://localhost:5173
-${DELAY}           2s
+${DELAY}           3s
 ${GetStart}        id=GetStarted
 ${Login}           id=Login
 ${SCREENSHOT_DIR}  ${OUTPUT DIR}/screenshots
@@ -16,13 +16,12 @@ Open Browser And Navigate To URL
     Open Browser    ${URL}    ${BROWSER}
     Maximize Browser Window
     Click Element    ${GetStart}
-    Sleep    ${DELAY}
     Input Text    name=email    guy.guy0205245@gmail.com
-    Sleep    ${DELAY}
     Input Text    name=password    Guyzapa1234!
     Sleep    ${DELAY}
     Click Element    ${Login}
     Wait Until Element Contains    xpath=/html/body/div[2]/div    Invalid Password!
+    Sleep    ${DELAY}
     Capture Screenshot
     Close Browser
 

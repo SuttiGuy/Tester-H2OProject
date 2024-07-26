@@ -1,27 +1,22 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library    XML
 Library    OperatingSystem
 
 *** Variables ***
 ${BROWSER}    Edge
-${URL}        http://localhost:5173
-${DELAY}      3s
-${GetStart}   id=GetStarted
-${Login}      id=Login
+${URL}        http://localhost:5173/payment
+${DELAY}      2s
 ${SCREENSHOT_DIR}  ${OUTPUT DIR}/screenshots
 
 *** Test Cases ***
-Open Browser And Navigate To URL
+Open Browser Navigate To URL Payment
+    [Documentation]    Forgot Password process Failed to send OTP.
     Open Browser    ${URL}    ${BROWSER}
-    Maximize Browser Window 
-    Click Element    ${GetStart} 
-    Input Text    name=email    guy.guy020524@gmail.com
-    Input Text    name=password    Guyza123!
-    Sleep    ${DELAY}
-    Click Element    ${Login}
-    Wait Until Element Contains    xpath=/html/body/div[2]/div    Invalid email or password!
-    Sleep    ${DELAY}
-    Capture Screenshot
+    Maximize Browser Window    # Maximizes the browser window
+    Click Element    xpath=//*[@id="root"]/div[3]/div[2]/div/button
+    Wait Until Element Is Visible    id=imgqr    timeout=3s
+      Capture Screenshot
     Close Browser
 
 *** Keywords ***

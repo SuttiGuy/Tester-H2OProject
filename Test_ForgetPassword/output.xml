@@ -1,103 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.4 on win32)" generated="20240719 21:23:42.851" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.11.4 on win32)" generated="20240719 21:31:24.586" rpa="false" schemaversion="3">
 <suite id="s1" name="TestforgetFailed" source="C:\Users\User\Desktop\Final_Project\test_H2OProject\Test_ForgetPassword\TestforgetFailed.robot">
-<test id="s1-t1" name="Open Browser Navigate To URL And Forget Password" line="15">
+<test id="s1-t1" name="Open Browser Navigate To URL And Forget Password" line="16">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20240719 21:23:43.057" level="INFO">Opening browser 'Edge' to base url 'http://localhost:5173'.</msg>
-<msg timestamp="20240719 21:23:43.065" level="INFO">Executing: C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser edge --output json</msg>
-<status status="PASS" starttime="20240719 21:23:43.056" endtime="20240719 21:23:51.275"/>
+<msg timestamp="20240719 21:31:24.763" level="INFO">Opening browser 'Edge' to base url 'http://localhost:5173'.</msg>
+<msg timestamp="20240719 21:31:24.769" level="INFO">Executing: C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser edge --output json</msg>
+<status status="PASS" starttime="20240719 21:31:24.763" endtime="20240719 21:31:26.555"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20240719 21:23:51.276" endtime="20240719 21:23:51.303"/>
+<status status="PASS" starttime="20240719 21:31:26.556" endtime="20240719 21:31:26.600"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${GetStart}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240719 21:23:51.306" level="INFO">Clicking element 'id=GetStarted'.</msg>
-<status status="PASS" starttime="20240719 21:23:51.304" endtime="20240719 21:23:51.368"/>
+<msg timestamp="20240719 21:31:26.602" level="INFO">Clicking element 'id=GetStarted'.</msg>
+<status status="PASS" starttime="20240719 21:31:26.601" endtime="20240719 21:31:26.675"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css=.label-text-alt</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240719 21:23:51.369" level="INFO">Clicking element 'css=.label-text-alt'.</msg>
-<status status="PASS" starttime="20240719 21:23:51.369" endtime="20240719 21:23:51.432"/>
+<msg timestamp="20240719 21:31:26.675" level="INFO">Clicking element 'css=.label-text-alt'.</msg>
+<status status="PASS" starttime="20240719 21:31:26.675" endtime="20240719 21:31:26.785"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>${DELAY}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240719 21:23:53.433" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20240719 21:23:51.433" endtime="20240719 21:23:53.433"/>
+<msg timestamp="20240719 21:31:28.789" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240719 21:31:26.787" endtime="20240719 21:31:28.789"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=swal2-input</arg>
 <arg>${EMAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240719 21:23:53.435" level="INFO">Typing text 'guy.guy0205245@gmail.com' into text field 'id=swal2-input'.</msg>
-<status status="PASS" starttime="20240719 21:23:53.433" endtime="20240719 21:23:53.539"/>
+<msg timestamp="20240719 21:31:28.789" level="INFO">Typing text 'guy.guy0205245@gmail.com' into text field 'id=swal2-input'.</msg>
+<status status="PASS" starttime="20240719 21:31:28.789" endtime="20240719 21:31:28.882"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css=.swal2-confirm</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240719 21:23:53.540" level="INFO">Clicking element 'css=.swal2-confirm'.</msg>
-<status status="PASS" starttime="20240719 21:23:53.540" endtime="20240719 21:23:53.578"/>
+<msg timestamp="20240719 21:31:28.883" level="INFO">Clicking element 'css=.swal2-confirm'.</msg>
+<status status="PASS" starttime="20240719 21:31:28.883" endtime="20240719 21:31:28.986"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>${DELAY}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240719 21:23:55.578" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20240719 21:23:53.578" endtime="20240719 21:23:55.578"/>
+<msg timestamp="20240719 21:31:30.986" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240719 21:31:28.986" endtime="20240719 21:31:30.986"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=swal2-input</arg>
 <arg>${PHONE}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240719 21:23:55.581" level="INFO">Typing text '0614294288' into text field 'id=swal2-input'.</msg>
-<status status="PASS" starttime="20240719 21:23:55.579" endtime="20240719 21:23:55.640"/>
+<msg timestamp="20240719 21:31:30.987" level="INFO">Typing text '0614294288' into text field 'id=swal2-input'.</msg>
+<status status="PASS" starttime="20240719 21:31:30.987" endtime="20240719 21:31:31.033"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css=.swal2-confirm</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240719 21:23:55.640" level="INFO">Clicking element 'css=.swal2-confirm'.</msg>
-<status status="PASS" starttime="20240719 21:23:55.640" endtime="20240719 21:23:55.673"/>
+<msg timestamp="20240719 21:31:31.034" level="INFO">Clicking element 'css=.swal2-confirm'.</msg>
+<status status="PASS" starttime="20240719 21:31:31.033" endtime="20240719 21:31:31.074"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>10s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240719 21:24:05.674" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20240719 21:23:55.673" endtime="20240719 21:24:05.674"/>
+<msg timestamp="20240719 21:31:41.074" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240719 21:31:31.074" endtime="20240719 21:31:41.074"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>id=reCAPTCHA</arg>
-<arg>timeout=20s</arg>
+<arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240719 21:24:05.675" endtime="20240719 21:24:05.706"/>
+<status status="PASS" starttime="20240719 21:31:41.075" endtime="20240719 21:31:41.120"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id=reCAPTCHA</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240719 21:24:05.707" level="INFO">Clicking element 'id=reCAPTCHA'.</msg>
-<status status="PASS" starttime="20240719 21:24:05.707" endtime="20240719 21:24:05.773"/>
+<msg timestamp="20240719 21:31:41.121" level="INFO">Clicking element 'id=reCAPTCHA'.</msg>
+<status status="PASS" starttime="20240719 21:31:41.121" endtime="20240719 21:31:41.192"/>
 </kw>
 <kw name="Wait Until Element Contains" library="SeleniumLibrary">
 <arg>xpath=/html/body/div[2]/div</arg>
 <arg>Failed to send OTP. Please try again.</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" starttime="20240719 21:24:05.774" endtime="20240719 21:24:07.143"/>
+<status status="PASS" starttime="20240719 21:31:41.192" endtime="20240719 21:31:42.348"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>10s</arg>
+<arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240719 21:24:17.143" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20240719 21:24:07.143" endtime="20240719 21:24:17.143"/>
+<msg timestamp="20240719 21:31:47.350" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240719 21:31:42.350" endtime="20240719 21:31:47.350"/>
+</kw>
+<kw name="Capture Screenshot">
+<kw name="Get Time" library="BuiltIn">
+<var>${timestamp}</var>
+<arg>epoch</arg>
+<doc>Returns the given time in the requested format.</doc>
+<msg timestamp="20240719 21:31:47.350" level="INFO">${timestamp} = 1721399507</msg>
+<status status="PASS" starttime="20240719 21:31:47.350" endtime="20240719 21:31:47.350"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${screenshot_path}</var>
+<arg>${SCREENSHOT_DIR}/screenshot_${timestamp}.png</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240719 21:31:47.350" level="INFO">${screenshot_path} = C:\Users\User\Desktop\Final_Project\test_H2OProject\Test_ForgetPassword/screenshots/screenshot_1721399507.png</msg>
+<status status="PASS" starttime="20240719 21:31:47.350" endtime="20240719 21:31:47.350"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${screenshot_path}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240719 21:31:47.650" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/screenshot_1721399507.png"&gt;&lt;img src="screenshots/screenshot_1721399507.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240719 21:31:47.350" endtime="20240719 21:31:47.650"/>
+</kw>
+<status status="PASS" starttime="20240719 21:31:47.350" endtime="20240719 21:31:47.651"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240719 21:31:47.651" endtime="20240719 21:31:49.857"/>
 </kw>
 <doc>Forgot Password process Failed to send OTP.</doc>
-<status status="PASS" starttime="20240719 21:23:43.056" endtime="20240719 21:24:17.143"/>
+<status status="PASS" starttime="20240719 21:31:24.763" endtime="20240719 21:31:49.858"/>
 </test>
-<status status="PASS" starttime="20240719 21:23:42.852" endtime="20240719 21:24:17.144"/>
+<status status="PASS" starttime="20240719 21:31:24.587" endtime="20240719 21:31:49.859"/>
 </suite>
 <statistics>
 <total>
