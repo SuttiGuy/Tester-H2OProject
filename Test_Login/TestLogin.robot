@@ -20,8 +20,8 @@ Open Browser Navigate To URL And Login success
     Input Text    name=password    Guyza123!
     Sleep    ${DELAY}
     Click Element    ${Login}
-    Wait Until Element Is Visible    xpath=//*[@id="avatarButton"]    timeout=10s
-    Element Should Be Visible    xpath=//*[@id="avatarButton"]    
+    Wait Until Element Is Visible    id=avatarButton    timeout=10s
+    Element Should Be Visible    id=avatarButton    
     Sleep    ${DELAY}
    Capture Screenshot
     Close Browser
