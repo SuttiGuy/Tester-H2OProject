@@ -6,7 +6,7 @@ Library    OperatingSystem
 *** Variables ***
 ${BROWSER}    Edge
 ${URL}        http://localhost:5173
-${FilterProvince}    id=กรุงเทพมหานคร
+${FilterProvince}    id=สุพรรณบุรี
 ${Scroll}        id=butttonSelect-Package
 ${Province-HomeStay}    id=Province-HomeStay
 ${SCREENSHOT_DIR}  ${OUTPUT DIR}/screenshots/FilterProvince
@@ -41,4 +41,4 @@ FilterByProvince
     Wait Until Element Is Visible    ${Scroll}     timeout=10s
     Click Element    ${FilterProvince} 
     Wait Until Element Is Visible    ${FilterProvince}     timeout=10s
-    Element Text Should Be    ${Province-HomeStay}    กรุงเทพมหานคร
+    Element Text Should Be    ${Province-HomeStay}    สุพรรณบุรี

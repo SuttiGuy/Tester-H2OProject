@@ -14,9 +14,8 @@ ${Date}               id=date-buttonHomstay
 ${Date-Start}    xpath=//*[@id="root"]/div[3]/div[1]/nav/div/div[2]/div/div/div[4]/div[3]/div/div/div/div/div[2]/div/div/div/div[2]/button[25]
 ${Date-End}      xpath=//*[@id="root"]/div[3]/div[1]/nav/div/div[2]/div/div/div[4]/div[3]/div/div/div/div/div[2]/div/div/div/div[2]/button[27]
 ${Search}             id=search-Homestay
-${Detail-HomeStay}    id=Name-Homestay
-${Detail-Room}        xpath=//*[@id="right-card"]/div/div[1]/span/div
-${SCREENSHOT_DIR}  ${OUTPUT DIR}/screenshots/NameHomeStay
+${Detail}        xpath=//*[@id="main-search"]/div[3]/div/div/span
+${SCREENSHOT_DIR}  ${OUTPUT DIR}/screenshots/NotFoundHomeStay
 
 *** Test Cases ***
 TC2002 ค้นหาที่พักโดยค้นหาจากชื่อที่พัก
@@ -25,11 +24,7 @@ TC2002 ค้นหาที่พักโดยค้นหาจากชื�
     DefinePeople
     StartandEnd_Date
     Click Element    ${Search}
-    Wait Until Element Contains    ${Detail-HomeStay}    บ้านปายดิน    10s  # เพิ่มเวลาในการรอหากจำเป็น
-    Element Should Contain    ${Detail-HomeStay}    บ้านปายดิน
-    Scroll Right
-    Wait Until Element Contains    ${Detail-Room}    2
-    Element Should Contain    ${Detail-Room}    2
+    Element Text Should Be    ${Detail}     ไม่มีข้อมูล
     Create Screenshot Directory
     Capture Screenshot
     Close Browser
@@ -38,7 +33,7 @@ TC2002 ค้นหาที่พักโดยค้นหาจากชื�
 InputNameHomeStay
     Wait Until Element Is Visible    ${NameSearch}    2s
     Click Element    ${NameSearch}
-    Input Text      ${NameSearch}    บ้านปายดิน
+    Input Text      ${NameSearch}    หมู่บ้านโคกระโหลก
 
 DefinePeople
     Click Button    ${People}
@@ -66,6 +61,4 @@ Remove Old Screenshots
 Capture Screenshot
     ${timestamp}    Get Time    epoch
     ${screenshot_path}    Set Variable    ${SCREENSHOT_DIR}/screenshot_${timestamp}.png
-    Capture Page Screenshot    ${screenshot_path}
-Scroll Right
-    Execute JavaScript    window.scrollBy(150, 0)   # scroll right
+    Capture Page Screenshot    ${screenshot_path}\

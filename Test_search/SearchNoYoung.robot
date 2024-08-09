@@ -33,7 +33,7 @@ TC2004 ค้นหาที่พักหรือแพ็คเกจโด�
 InputNameHomeStay
     Wait Until Element Is Visible    ${NameSearch}    2s
     Click Element    ${NameSearch}
-    Input Text      ${NameSearch}    Kanchanaburi
+    Input Text      ${NameSearch}    สุพรรณบุรี
 
 DefinePeople
     Click Button    ${People}

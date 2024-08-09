@@ -5,16 +5,25 @@ Library    XML
 *** Variables ***
 ${BROWSER}    Edge
 ${URL}        http://localhost:5173
-${DELAY}      2s
 ${GetStart}   id=GetStarted
 ${Sing-up}    id=NoAccount-HaveAccount
 ${Name}       name=name
 ${LastName}   name=lastName
 ${Email}      name=email
-${Password}   name=passwprd
+${Password}   name=password
+${Confirm}    name=ConfirmPassword
+${Phone}      name=phone
+${SignUp}     id=SignUp
+${CheckBox}    id=reCAPTCHA
+${OTP1}        id=otp
+${OTP2}        xpath=//input[2]
+${OTP3}        xpath=//input[3]
+${OTP4}        xpath=//input[4]
+${OTP5}        xpath=//input[5]
+${OTP6}        xpath=//input[6]
 
 *** Test Cases ***
-Open Browser And Navigate To URL
+RegisterUser
     Open Browser    ${URL}    ${BROWSER}
     Maximize Browser Window    
     Click Element    ${GetStart}
@@ -22,7 +31,15 @@ Open Browser And Navigate To URL
     InputName
     InputLastName
     InputEmail
-    Sleep    5s
+    InputPassword
+    InputConfirmPassword
+    InputPhoneNumber
+    Click Button    ${SignUp}
+    CheckBoxNotRobot
+    Sleep    10s
+    OTP
+    Capture Page Screenshot
+    
 
 *** Keywords ***
 InputName
@@ -34,3 +51,26 @@ InputLastName
 
 InputEmail
     Input Text    ${Email}    Payterlon@gmail.com
+
+InputPassword
+    Input Text    ${Password}    Guyei_ei2
+
+InputConfirmPassword   
+    Input Text    ${Confirm}    Guyei_ei2
+
+InputPhoneNumber
+    Input Text    ${Phone}    614294288
+
+CheckBoxNotRobot
+    Sleep    10s
+    Wait Until Element Is Visible    ${CheckBox}    10s
+    Click Element    ${CheckBox}
+
+OTP
+    Wait Until Element Is Visible    ${OTP1}    5s
+    Input Text    ${OTP1}    1
+    Input Text    ${OTP2}    2
+    Input Text    ${OTP3}    3
+    Input Text    ${OTP4}    4
+    Input Text    ${OTP5}    5
+    Input Text    ${OTP6}    6

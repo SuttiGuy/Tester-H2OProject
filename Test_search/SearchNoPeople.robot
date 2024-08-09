@@ -30,7 +30,7 @@ TC2003 ค้นหาที่พักหรือแพ็คเกจโด�
 InputNameHomeStay
     Wait Until Element Is Visible    ${NameSearch}    2s
     Click Element    ${NameSearch}
-    Input Text      ${NameSearch}    Kanchanaburi
+    Input Text      ${NameSearch}    สุพรรณบุรี
 StartAndEnd_Date
     Click Button    ${Date}
     Click Button    ${Date-Start}

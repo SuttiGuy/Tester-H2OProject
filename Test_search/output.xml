@@ -1,126 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.4 on win32)" generated="20240805 15:25:37.973" rpa="false" schemaversion="3">
-<suite id="s1" name="SearchByNoHomeStay" source="C:\Users\User\Desktop\Final_Project\test_H2OProject\Test_search\SearchByNoHomeStay.robot">
-<test id="s1-t1" name="Open Browser get FilterByProvince" line="22">
+<robot generator="Robot 6.0.2 (Python 3.11.4 on win32)" generated="20240809 15:22:18.902" rpa="false" schemaversion="3">
+<suite id="s1" name="SearchByFilterProvince" source="C:\Users\User\Desktop\Final_Project\test_H2OProject\Test_search\SearchByFilterProvince.robot">
+<test id="s1-t1" name="Open Browser get FilterByProvince" line="15">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20240805 15:25:38.145" level="INFO">Opening browser 'Edge' to base url 'http://localhost:5173'.</msg>
-<msg timestamp="20240805 15:25:38.151" level="INFO">Executing: C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser edge --output json</msg>
-<status status="PASS" starttime="20240805 15:25:38.145" endtime="20240805 15:25:40.281"/>
+<msg timestamp="20240809 15:22:19.176" level="INFO">Opening browser 'Edge' to base url 'http://localhost:5173'.</msg>
+<msg timestamp="20240809 15:22:19.185" level="INFO">Executing: C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser edge --output json</msg>
+<status status="PASS" starttime="20240809 15:22:19.175" endtime="20240809 15:22:22.993"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20240805 15:25:40.282" endtime="20240805 15:25:40.330"/>
+<status status="PASS" starttime="20240809 15:22:22.994" endtime="20240809 15:22:23.088"/>
 </kw>
-<kw name="InputNameHomeStay">
+<kw name="FilterByProvince">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240809 15:22:26.091" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240809 15:22:23.090" endtime="20240809 15:22:26.091"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${Scroll}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20240809 15:22:26.091" endtime="20240809 15:22:26.433"/>
+</kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${NameSearch}</arg>
-<arg>2s</arg>
+<arg>${Scroll}</arg>
+<arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240805 15:25:40.331" endtime="20240805 15:25:40.567"/>
+<status status="PASS" starttime="20240809 15:22:26.434" endtime="20240809 15:22:26.458"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${NameSearch}</arg>
+<arg>${FilterProvince}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240805 15:25:40.568" level="INFO">Clicking element 'id=search-text'.</msg>
-<status status="PASS" starttime="20240805 15:25:40.567" endtime="20240805 15:25:40.617"/>
+<msg timestamp="20240809 15:22:26.459" level="INFO">Clicking element 'id=สุพรรณบุรี'.</msg>
+<status status="PASS" starttime="20240809 15:22:26.458" endtime="20240809 15:22:26.508"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${NameSearch}</arg>
-<arg>ราชบุรี</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240805 15:25:40.617" level="INFO">Typing text 'ราชบุรี' into text field 'id=search-text'.</msg>
-<status status="PASS" starttime="20240805 15:25:40.617" endtime="20240805 15:25:40.681"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FilterProvince}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240809 15:22:26.508" endtime="20240809 15:22:26.524"/>
 </kw>
-<status status="PASS" starttime="20240805 15:25:40.330" endtime="20240805 15:25:40.681"/>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${Province-HomeStay}</arg>
+<arg>สุพรรณบุรี</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20240809 15:22:26.524" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg timestamp="20240809 15:22:26.526" level="INFO">Verifying element 'id=Province-HomeStay' contains exact text 'สุพรรณบุรี'.</msg>
+<status status="PASS" starttime="20240809 15:22:26.524" endtime="20240809 15:22:26.546"/>
 </kw>
-<kw name="DefinePeople">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${People}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20240805 15:25:40.682" level="INFO">Clicking button 'id=people-buttonHomstay'.</msg>
-<status status="PASS" starttime="20240805 15:25:40.682" endtime="20240805 15:25:40.753"/>
+<status status="PASS" starttime="20240809 15:22:23.090" endtime="20240809 15:22:26.546"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${Young}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20240805 15:25:40.754" level="INFO">Clicking button 'id=Increase[1]'.</msg>
-<status status="PASS" starttime="20240805 15:25:40.753" endtime="20240805 15:25:40.837"/>
+<kw name="Create Screenshot Directory">
+<kw name="Create Directory" library="OperatingSystem">
+<arg>${SCREENSHOT_DIR}</arg>
+<doc>Creates the specified directory.</doc>
+<msg timestamp="20240809 15:22:26.547" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\User\Desktop\Final_Project\test_H2OProject\Test_search\screenshots\FilterProvince"&gt;C:\Users\User\Desktop\Final_Project\test_H2OProject\Test_search\screenshots\FilterProvince&lt;/a&gt;' already exists.</msg>
+<status status="PASS" starttime="20240809 15:22:26.547" endtime="20240809 15:22:26.548"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${Child}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20240805 15:25:40.839" level="INFO">Clicking button 'id=Increase[2]'.</msg>
-<status status="PASS" starttime="20240805 15:25:40.838" endtime="20240805 15:25:40.906"/>
+<kw name="Remove Old Screenshots">
+<kw name="List Files In Directory" library="OperatingSystem">
+<var>${files}</var>
+<arg>${SCREENSHOT_DIR}</arg>
+<doc>Wrapper for `List Directory` that returns only files.</doc>
+<msg timestamp="20240809 15:22:26.548" level="INFO" html="true">Listing contents of directory '&lt;a href="file://C:\Users\User\Desktop\Final_Project\test_H2OProject\Test_search\screenshots\FilterProvince"&gt;C:\Users\User\Desktop\Final_Project\test_H2OProject\Test_search\screenshots\FilterProvince&lt;/a&gt;'.</msg>
+<msg timestamp="20240809 15:22:26.549" level="INFO">1 file:
+screenshot_1722843550.png</msg>
+<msg timestamp="20240809 15:22:26.549" level="INFO">${files} = ['screenshot_1722843550.png']</msg>
+<status status="PASS" starttime="20240809 15:22:26.548" endtime="20240809 15:22:26.549"/>
 </kw>
-<status status="PASS" starttime="20240805 15:25:40.682" endtime="20240805 15:25:40.907"/>
+<for flavor="IN">
+<var>${file}</var>
+<value>@{files}</value>
+<iter>
+<var name="${file}">screenshot_1722843550.png</var>
+<kw name="Remove File" library="OperatingSystem">
+<arg>${SCREENSHOT_DIR}/${file}</arg>
+<doc>Removes a file with the given path.</doc>
+<msg timestamp="20240809 15:22:26.551" level="INFO" html="true">Removed file '&lt;a href="file://C:\Users\User\Desktop\Final_Project\test_H2OProject\Test_search\screenshots\FilterProvince\screenshot_1722843550.png"&gt;C:\Users\User\Desktop\Final_Project\test_H2OProject\Test_search\screenshots\FilterProvince\screenshot_1722843550.png&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20240809 15:22:26.550" endtime="20240809 15:22:26.551"/>
 </kw>
-<kw name="StartandEnd_Date">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${Date}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20240805 15:25:40.908" level="INFO">Clicking button 'id=date-buttonHomstay'.</msg>
-<status status="PASS" starttime="20240805 15:25:40.907" endtime="20240805 15:25:40.979"/>
+<status status="PASS" starttime="20240809 15:22:26.549" endtime="20240809 15:22:26.551"/>
+</iter>
+<status status="PASS" starttime="20240809 15:22:26.549" endtime="20240809 15:22:26.551"/>
+</for>
+<status status="PASS" starttime="20240809 15:22:26.548" endtime="20240809 15:22:26.551"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${Date-Start}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20240805 15:25:40.979" level="INFO">Clicking button 'xpath=//*[@id="root"]/div[3]/div[1]/nav/div/div[2]/div/div/div[4]/div[3]/div/div/div/div/div[2]/div/div/div/div[2]/button[25]'.</msg>
-<status status="PASS" starttime="20240805 15:25:40.979" endtime="20240805 15:25:41.052"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${Date-End}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20240805 15:25:41.052" level="INFO">Clicking button 'xpath=//*[@id="root"]/div[3]/div[1]/nav/div/div[2]/div/div/div[4]/div[3]/div/div/div/div/div[2]/div/div/div/div[2]/button[27]'.</msg>
-<status status="PASS" starttime="20240805 15:25:41.052" endtime="20240805 15:25:41.156"/>
-</kw>
-<status status="PASS" starttime="20240805 15:25:40.907" endtime="20240805 15:25:41.156"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Search}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240805 15:25:41.157" level="INFO">Clicking element 'id=search-Homestay'.</msg>
-<status status="PASS" starttime="20240805 15:25:41.156" endtime="20240805 15:25:41.225"/>
-</kw>
-<kw name="Wait Until Element Contains" library="SeleniumLibrary">
-<arg>${Detail-HomeStay}</arg>
-<arg>ไม่มีข้อมูล</arg>
-<arg>2s</arg>
-<doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" starttime="20240805 15:25:41.225" endtime="20240805 15:25:41.250"/>
+<status status="PASS" starttime="20240809 15:22:26.547" endtime="20240809 15:22:26.551"/>
 </kw>
 <kw name="Capture Screenshot">
 <kw name="Get Time" library="BuiltIn">
 <var>${timestamp}</var>
 <arg>epoch</arg>
 <doc>Returns the given time in the requested format.</doc>
-<msg timestamp="20240805 15:25:41.251" level="INFO">${timestamp} = 1722846341</msg>
-<status status="PASS" starttime="20240805 15:25:41.251" endtime="20240805 15:25:41.251"/>
+<msg timestamp="20240809 15:22:26.552" level="INFO">${timestamp} = 1723191746</msg>
+<status status="PASS" starttime="20240809 15:22:26.552" endtime="20240809 15:22:26.552"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${screenshot_path}</var>
 <arg>${SCREENSHOT_DIR}/screenshot_${timestamp}.png</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240805 15:25:41.251" level="INFO">${screenshot_path} = C:\Users\User\Desktop\Final_Project\test_H2OProject\Test_search/screenshots/SearchNoHomeStay/screenshot_1722846341.png</msg>
-<status status="PASS" starttime="20240805 15:25:41.251" endtime="20240805 15:25:41.251"/>
+<msg timestamp="20240809 15:22:26.552" level="INFO">${screenshot_path} = C:\Users\User\Desktop\Final_Project\test_H2OProject\Test_search/screenshots/FilterProvince/screenshot_1723191746.png</msg>
+<status status="PASS" starttime="20240809 15:22:26.552" endtime="20240809 15:22:26.552"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <arg>${screenshot_path}</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20240805 15:25:41.412" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/SearchNoHomeStay/screenshot_1722846341.png"&gt;&lt;img src="screenshots/SearchNoHomeStay/screenshot_1722846341.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20240805 15:25:41.251" endtime="20240805 15:25:41.412"/>
+<msg timestamp="20240809 15:22:26.989" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/FilterProvince/screenshot_1723191746.png"&gt;&lt;img src="screenshots/FilterProvince/screenshot_1723191746.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240809 15:22:26.552" endtime="20240809 15:22:26.989"/>
 </kw>
-<status status="PASS" starttime="20240805 15:25:41.250" endtime="20240805 15:25:41.412"/>
+<status status="PASS" starttime="20240809 15:22:26.552" endtime="20240809 15:22:26.989"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20240805 15:25:41.413" endtime="20240805 15:25:43.569"/>
+<status status="PASS" starttime="20240809 15:22:26.990" endtime="20240809 15:22:30.790"/>
 </kw>
-<status status="PASS" starttime="20240805 15:25:38.144" endtime="20240805 15:25:43.572"/>
+<status status="PASS" starttime="20240809 15:22:19.174" endtime="20240809 15:22:30.790"/>
 </test>
-<status status="PASS" starttime="20240805 15:25:37.975" endtime="20240805 15:25:43.573"/>
+<status status="PASS" starttime="20240809 15:22:18.904" endtime="20240809 15:22:30.792"/>
 </suite>
 <statistics>
 <total>
@@ -129,9 +129,10 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="SearchByNoHomeStay">SearchByNoHomeStay</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="SearchByFilterProvince">SearchByFilterProvince</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20240809 15:22:26.524" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
 </errors>
 </robot>
