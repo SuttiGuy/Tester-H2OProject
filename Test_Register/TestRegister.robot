@@ -15,12 +15,12 @@ ${Confirm}    name=ConfirmPassword
 ${Phone}      name=phone
 ${SignUp}     id=SignUp
 ${CheckBox}    id=reCAPTCHA
-${OTP1}        id=otp
-${OTP2}        xpath=//input[2]
-${OTP3}        xpath=//input[3]
-${OTP4}        xpath=//input[4]
-${OTP5}        xpath=//input[5]
-${OTP6}        xpath=//input[6]
+${OTP1}        id=otp[0]
+${OTP2}        id=otp[1]
+${OTP3}        id=otp[2]
+${OTP4}        id=otp[3]
+${OTP5}        id=otp[4]
+${OTP6}        id=otp[5]
 
 *** Test Cases ***
 RegisterUser
@@ -50,7 +50,7 @@ InputLastName
     Input Text    ${LastName}    Kaewsakun
 
 InputEmail
-    Input Text    ${Email}    Payterlon@gmail.com
+    Input Text    ${Email}    Pattenkill@gmail.com
 
 InputPassword
     Input Text    ${Password}    Guyei_ei2

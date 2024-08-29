@@ -11,16 +11,17 @@ ${People}             id=people-buttonHomstay
 ${Young}              id=Increase[1]
 ${Child}              id=Increase[2]
 ${Date}               id=date-buttonHomstay
-${Date-Start}    xpath=//*[@id="root"]/div[3]/div[1]/nav/div/div[2]/div/div/div[4]/div[3]/div/div/div/div/div[2]/div/div/div/div[2]/button[25]
-${Date-End}      xpath=//*[@id="root"]/div[3]/div[1]/nav/div/div[2]/div/div/div[4]/div[3]/div/div/div/div/div[2]/div/div/div/div[2]/button[27]
+${Date-Start}    xpath=(//button[@type='button'])[40]
+${Date-End}      xpath=(//button[@type='button'])[12]
 ${Search}             id=search-Homestay
 ${Detail-HomeStay}    id=Name-Homestay
-${Detail-Room}        xpath=//*[@id="right-card"]/div/div[1]/span/div
+${Room}               xpath=//*[@id="right-card"]/div/div[1]/span/div
 ${SCREENSHOT_DIR}  ${OUTPUT DIR}/screenshots/NameHomeStay
 
 *** Test Cases ***
 TC2002 ค้นหาที่พักโดยค้นหาจากชื่อที่พัก
-    Open Browser    ${URL}    ${BROWSER}  
+    Open Browser    ${URL}    ${BROWSER} 
+    Maximize Browser Window 
     InputNameHomeStay
     DefinePeople
     StartandEnd_Date
@@ -28,8 +29,8 @@ TC2002 ค้นหาที่พักโดยค้นหาจากชื�
     Wait Until Element Contains    ${Detail-HomeStay}    บ้านปายดิน    10s  # เพิ่มเวลาในการรอหากจำเป็น
     Element Should Contain    ${Detail-HomeStay}    บ้านปายดิน
     Scroll Right
-    Wait Until Element Contains    ${Detail-Room}    2
-    Element Should Contain    ${Detail-Room}    2
+    Wait Until Element Contains    ${Room}    ใช้ห้องทั้งหมด: 1
+    Element Should Contain    ${Room}    ใช้ห้องทั้งหมด: 1
     Create Screenshot Directory
     Capture Screenshot
     Close Browser
@@ -44,9 +45,6 @@ DefinePeople
     Click Button    ${People}
     Click Button    ${Young}
     Click Button    ${Young}
-    Click Button    ${Young}
-    Click Button    ${Child}
-    Click Button    ${Child}
 
 StartandEnd_Date
     Click Button    ${Date}

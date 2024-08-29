@@ -6,6 +6,12 @@ Library    OperatingSystem
 *** Variables ***
 ${BROWSER}    Edge
 ${URL}        http://localhost:5173
+${GetStart}   id=GetStarted
+${Login}      id=Login
+${Email}      name=email
+${Password}    name=password 
+${UserEmail}        guy.guy0205245@gmail.com
+${UserPassword}    Guyza123!
 ${FilterProvince}    id=สุพรรณบุรี
 ${Scroll}        id=butttonSelect-Package
 ${Province-HomeStay}    id=Province-HomeStay
@@ -14,7 +20,8 @@ ${SCREENSHOT_DIR}  ${OUTPUT DIR}/screenshots/FilterProvince
 *** Test Cases ***
 Open Browser get FilterByProvince
     Open Browser    ${URL}    ${BROWSER}
-    Maximize Browser Window    
+    Maximize Browser Window
+    UserLogIn    
     FilterByProvince
     Create Screenshot Directory
     Capture Screenshot
@@ -42,3 +49,10 @@ FilterByProvince
     Click Element    ${FilterProvince} 
     Wait Until Element Is Visible    ${FilterProvince}     timeout=10s
     Element Text Should Be    ${Province-HomeStay}    สุพรรณบุรี
+
+UserLogIn
+    Sleep    5s
+    Click Element    ${GetStart}
+    Input Text    ${Email}      ${UserEmail}
+    Input Text    ${Password}      ${UserPassword}
+    Click Element    ${Login}
