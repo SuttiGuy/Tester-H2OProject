@@ -26,9 +26,8 @@ TC2002 ค้นหาที่พักโดยค้นหาจากชื�
     DefinePeople
     StartandEnd_Date
     Click Element    ${Search}
-    Wait Until Element Contains    ${Detail-HomeStay}    บ้านปายดิน    10s  # เพิ่มเวลาในการรอหากจำเป็น
-    Element Should Contain    ${Detail-HomeStay}    บ้านปายดิน
-    Scroll Right
+    Wait Until Element Contains    ${Detail-HomeStay}    ริม    10s  # เพิ่มเวลาในการรอหากจำเป็น
+    Element Should Contain    ${Detail-HomeStay}    ริม
     Wait Until Element Contains    ${Room}    ใช้ห้องทั้งหมด: 1
     Element Should Contain    ${Room}    ใช้ห้องทั้งหมด: 1
     Create Screenshot Directory
@@ -39,7 +38,7 @@ TC2002 ค้นหาที่พักโดยค้นหาจากชื�
 InputNameHomeStay
     Wait Until Element Is Visible    ${NameSearch}    2s
     Click Element    ${NameSearch}
-    Input Text      ${NameSearch}    บ้านปายดิน
+    Input Text      ${NameSearch}    ริม
 
 DefinePeople
     Click Button    ${People}

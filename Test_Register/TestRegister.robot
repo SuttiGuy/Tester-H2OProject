@@ -59,7 +59,7 @@ InputConfirmPassword
     Input Text    ${Confirm}    Guyei_ei2
 
 InputPhoneNumber
-    Input Text    ${Phone}    614294288
+    Input Text    ${Phone}    614294289
 
 CheckBoxNotRobot
     Sleep    10s
