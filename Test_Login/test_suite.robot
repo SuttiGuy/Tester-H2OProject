@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../resources/variables.robot
-Resource    ../resources/keywords.robot
+Resource    resources/variables.robot
+Resource    resources/keywords.robot
 Library    OperatingSystem
 
 

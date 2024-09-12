@@ -6,7 +6,12 @@ Resource    ../resources/keywords.robot
 Library    XML
 
 *** Test Cases ***
-TC3001 ดูรายละเอียดห้องพัก จากการกรอกจากจังหวัด
+TC3001 ดูรายละเอียดที่พัก จากการค้นหาจากชื่อที่พัก
+    Open Browser    ${URL}    ${BROWSER}
+    Maximize Browser Window 
+    LoginUser
+
+TC3002 ดูรายละเอียดห้องพัก จากการกรอกจากจังหวัด
     Open Browser    ${URL}    ${BROWSER}
     Maximize Browser Window 
     LoginUser
@@ -18,5 +23,4 @@ TC3001 ดูรายละเอียดห้องพัก จากกา
     Sleep    10s
     Close Browser
 
-TC3002
 
