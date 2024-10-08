@@ -1,4 +1,5 @@
-
+*** Settings ***
+Library    SeleniumLibrary
 *** Keywords ***
 LoginUser
     Sleep    3s
@@ -6,51 +7,43 @@ LoginUser
     Input Text    ${Email}    ${UserEmail}
     Input Text    ${Password}    ${UserPassword}
     Click Element    ${Login}
+    Sleep    5s
 
-HomeStayProvine
-    Scroll Element Into View    id=ทั้งหมด[P]
-    Click Button    ${Provine-HOMESTAY}
-    Click Element    ${Name-HOMESTAY}
-
-DefinePeopleandRoom
-    Wait Until Element Is Enabled    ${People}
-    Scroll Element Into View    ${People}
+Search by Province
     Click Button    ${People}
-    Click Button    ${ADULT}
-    Click Button    ${ADULT}
-    Click Button    ${ROOM} 
-
-StartandEnd_Date
+    Click Button    ${Young}
     Click Button    ${Date}
     Click Button    ${Date-Start}
     Click Button    ${Date-End}
-
-Choose the name of the room you are interested
-    Wait Until Element Is Visible    ${Name-Room}
-    Click Element    ${Name-Room}
-    Wait Until Element Is Visible   xpath=//*[@id="detailTypeRoom"]/div/div/div[1]/div/div[2]/div/div/div[4]/button
-    Click Button    xpath=//*[@id="detailTypeRoom"]/div/div/div[1]/div/div[2]/div/div/div[4]/button
-
-CheckBill
-    Scroll Element Into View    xpath=//*[@id="root"]/div[3]/div[2]/div/div/div[1]/div[3]/div/div[4]/button
-    Click Element    xpath=//*[@id="root"]/div[3]/div[2]/div/div/div[1]/div[3]/div/div[4]/button
-    Sleep    3s
-    Wait Until Element Is Enabled    id=one-time-code     3s
-    Input Text    id=one-time-code   000000
-    Sleep    6s
-    Click Element    xpath=//div[@id='root']/div/div/div[2]/main/div/form/div/div/div/div[2]/div/div/div/div/div[2]/button/div/span/div[2]
-    Sleep    4s
+    Wait Until Element Is Visible    ${NameSearch}    2s
+    Click Element    ${NameSearch}
+    Input Text      ${NameSearch}     ${InputSearchProvince} 
+    Click Element    ${Search}
+    Sleep    5s
+    Click Element    ${Homestay} 
 
 
-Create Screenshot Directory
-    Create Directory    ${SCREENSHOT_DIR}
-    Remove Old Screenshots
+Choose the room booking
+    Sleep    5s
+    Scroll Element Into View    ${Scroll}
+    Click Button    ${bookingHomestay}
+    
+Payment
+    Wait Until Element Is Visible    ${Payment}    5s
+    Click Button    ${Payment}
+    Wait Until Element Is Visible    ${CardNumber}    4s
+    Input Text    ${CardNumber}    4242 4242 4242 4242
+    Input Text    ${CardExpiry}    0528
+    Input Text    ${CardCvc}       121
+    Input Text    ${CardName}      Suttiguy  
+    Click Element     ${Pay} 
+
+check Payment
+    Wait Until Element Is Enabled    ${Checkbill}    5s
+    Textarea Should Contain    ${Checkbill}    การชำระเงินของคุณได้รับการดำเนินการเรียบร้อยแล้วcted
+
+Capture Screenshot
+    Sleep    5s
     ${timestamp}    Get Time    epoch
     ${screenshot_path}    Set Variable    ${SCREENSHOT_DIR}/screenshot_${timestamp}.png
     Capture Page Screenshot    ${screenshot_path}
-
-Remove Old Screenshots
-    ${files}    List Files In Directory    ${SCREENSHOT_DIR}
-    FOR    ${file}    IN    @{files}
-        Remove File    ${SCREENSHOT_DIR}/${file}
-    END

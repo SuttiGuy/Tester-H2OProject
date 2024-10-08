@@ -1,3 +1,5 @@
+*** Settings ***
+Library    SeleniumLibrary
 *** Keywords ***
 LoginUser
     Sleep    3s
@@ -5,6 +7,15 @@ LoginUser
     Input Text    ${Email}    ${UserEmail}
     Input Text    ${Password}    ${UserPassword}
     Click Element    ${Login}
+
+
+InputNameHomeStay
+    Wait Until Element Is Visible    ${NameSearch}    2s
+    Click Element    ${NameSearch}
+    Input Text      ${NameSearch}    ริม
+    Click Element    ${Search}
+    Wait Until Element Is Visible    id=detailCard-Homestay    5s
+    Click Element    id=detailCard-Homestay
 
 HomeStayProvine
     Scroll Element Into View    id=ทั้งหมด[P]
@@ -20,6 +31,7 @@ DefinePeopleandRoom
     Click Button    ${ROOM} 
 
 StartAndEnd_Date
+    Scroll Element Into View    ${People}
     Click Button    ${Date}
     Click Button    ${Date-Start}
     Click Button    ${Date-End}
@@ -32,6 +44,11 @@ Choose the name of the room you are interested
 
 CheckDetail
     Scroll Element Into View    xpath=//*[@id="root"]/div[3]/div[2]/div/div/div[1]/div[1]/div/div[2]/div[2]/div[1]
-    Element Should Contain    xpath=//*[@id="root"]/div[3]/div[2]/div/div/div[1]/div[1]/div/div[2]/div[2]/div[1]    Suttiguy
+    Element Should Contain    xpath=//*[@id="root"]/div[3]/div[2]/div/div/div[1]/div[1]/div/div[2]/div[2]/div[1]    สุทธิพร แก้วสกุลณี
     Element Should Contain    xpath=//*[@id="root"]/div[3]/div[2]/div/div/div[1]/div[1]/div/div[2]/div[2]/div[2]    ${UserEmail}
 
+
+Capture Screenshot
+    ${timestamp}    Get Time    epoch
+    ${screenshot_path}    Set Variable    ${SCREENSHOT_DIR}/screenshot_${timestamp}.png
+    Capture Page Screenshot    ${screenshot_path}

@@ -1,8 +1,8 @@
 *** Settings ***
-Library    SeleniumLibrary
+Library     SeleniumLibrary
 Resource    resources/variables.robot
 Resource    resources/keywords.robot
-Library    OperatingSystem
+Library     OperatingSystem
 
 
 *** Test Cases ***
@@ -36,6 +36,7 @@ TC6002 เข้าสู่ระบบของผู้ใช้แบบม�
 TC6003 เข้าสู่ระบบโดยที่รูปแบบอีเมลไม่ตรงกับระบบ
     [Tags]    PassLoginInvalidEmail and Password
     Open Browser    ${URL}    ${BROWSER}
+    Sleep    5s
     Maximize Browser Window 
     Click Element    ${GetStart} 
     Input Text    ${Email}    ${Email3}

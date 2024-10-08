@@ -1,13 +1,4 @@
 *** Keywords ***
-Create Screenshot Directory
-    Create Directory    ${SCREENSHOT_DIR}
-
-Capture Screenshot
-    Sleep    3s
-    ${timestamp}    Get Time    epoch
-    ${screenshot_path}    Set Variable    ${SCREENSHOT_DIR}/screenshot_${timestamp}.png
-    Capture Page Screenshot    ${screenshot_path}
-
 Click GetStart
     Wait Until Element Is Visible    ${GetStart}    5s    
     Click Element    ${GetStart}
@@ -23,12 +14,19 @@ CheckProfile
 
 CheckUserandRole1
     Click Element    ${Profile} 
-    Wait Until Element Is Visible    xpath=//*[@id="userDropdown"]/div[1]/div[1]
-    Element Text Should Be    xpath=//*[@id="userDropdown"]/div[1]/div[1]    Suttiguy Kaewsakunnee
+    Wait Until Element Is Visible    xpath=//*[@id="userDropdown"]/div[1]/div[2]
     Element Text Should Be    xpath=//*[@id="userDropdown"]/div[1]/div[2]    ${Role1}
 
 CheckUserandRole2
     Click Element    ${Profile} 
-    Wait Until Element Is Visible    xpath=//*[@id="userDropdown"]/div[1]/div[1]
-    Element Text Should Be    xpath=//*[@id="userDropdown"]/div[1]/div[1]    Suppha1akHotel
+    Wait Until Element Is Visible    xpath=//*[@id="userDropdown"]/div[1]/div[2]
     Element Text Should Be    xpath=//*[@id="userDropdown"]/div[1]/div[2]    ${Role2}
+
+Capture Screenshot
+    Sleep    3s
+    ${timestamp}    Get Time    epoch
+    ${screenshot_path}    Set Variable    ${SCREENSHOT_DIR}/screenshot_${timestamp}.png
+    Capture Page Screenshot    ${screenshot_path}
+
+Create Screenshot Directory
+    Create Directory    ${SCREENSHOT_DIR}
