@@ -1,3 +1,5 @@
+*** Settings ***
+Library    SeleniumLibrary
 *** Keywords ***
 LoginUser
     Sleep    3s
@@ -15,9 +17,17 @@ Click Booking
     Wait Until Element Is Visible    ${Booking}    10s
     Click Element    ${Booking}
 
+Click bookingPackage
+    Wait Until Element Is Visible    ${Package}     5s
+    Click Button    ${Package} 
 
 Check Status
     Wait Until Element Is Visible    ${Status}    15s
     Element Should Contain    ${Status}    Confirmed
 
 
+Capture Screenshot
+    Sleep    5s
+    ${timestamp}    Get Time    epoch
+    ${screenshot_path}    Set Variable    ${SCREENSHOT_DIR}/screenshot_${timestamp}.png
+    Capture Page Screenshot    ${screenshot_path}

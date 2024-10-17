@@ -1,5 +1,3 @@
-*** Settings ***
-Library    SeleniumLibrary
 *** Keywords ***
 LoginUser
     Sleep    3s
@@ -9,7 +7,7 @@ LoginUser
     Click Element    ${Login}
     Sleep    5s
 
-Search by Province
+Search by Homestay
     Click Button    ${People}
     Click Button    ${Young}
     Click Button    ${Date}
@@ -23,24 +21,56 @@ Search by Province
     Click Element    ${Homestay} 
 
 
+Search by Package
+    Click Button    ${SelectPackage} 
+    Click Button    ${People}
+    Click Button    ${Young}
+    Click Button    ${Date}
+    Click Button    ${Package-Start}
+    Click Button    ${Package-End}
+    Click Element    ${Search}
+    Sleep    5s
+    Click Element    ${Homestay} 
+
 Choose the room booking
     Sleep    5s
     Scroll Element Into View    ${Scroll}
     Click Button    ${bookingHomestay}
-    
-Payment
     Wait Until Element Is Visible    ${Payment}    5s
     Click Button    ${Payment}
+
+Choose Package
+    Sleep    5s
+    Scroll Element Into View    ${ScrollPackage}
+    Click Button    ${bookingPackage}
+    
+Payment
+    Wait Until Element Is Visible    ${CardNumber}    4s
+    Input Text    ${CardNumber}    4242 4242 4242 4242
+    Input Text    ${CardExpiry}    0528
+    Input Text    ${CardCvc}       121
+    Input Text    ${CardName}      Suttiguy
+    Scroll Element Into View    ${Pay}  
+    Click Element     ${Pay} 
+
+Alert    
+    Sleep    4s
+    Wait Until Element Is Enabled     ${Alert}    5s
+    Click Button    ${Alert}
+
+
+Pay
     Wait Until Element Is Visible    ${CardNumber}    4s
     Input Text    ${CardNumber}    4242 4242 4242 4242
     Input Text    ${CardExpiry}    0528
     Input Text    ${CardCvc}       121
     Input Text    ${CardName}      Suttiguy  
+    Scroll Element Into View    ${Pay} 
     Click Element     ${Pay} 
 
 check Payment
     Wait Until Element Is Enabled    ${Checkbill}    5s
-    Textarea Should Contain    ${Checkbill}    การชำระเงินของคุณได้รับการดำเนินการเรียบร้อยแล้วcted
+    Element Should Be Visible     ${Checkbill}    การชำระเงินของคุณได้รับการดำเนินการเรียบร้อยแล้ว
 
 Capture Screenshot
     Sleep    5s
