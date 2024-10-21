@@ -23,10 +23,20 @@ InputNameHomeStay2
     Click Element    ${NameSearch}
     Input Text      ${NameSearch}    หมู่บ้านโคกระโหลก
 
+InputNameProvincePackage
+    Wait Until Element Is Visible    ${SearchPackage}    5s
+    Click Button    ${SearchPackage}
+    Input Text    ${NameSearch}    ${InputSearchProvincePackage} 
 
 InputNamePackage
+    Wait Until Element Is Visible    ${SearchPackage}    5s
     Click Button    ${SearchPackage}
-    Input Text    ${NameSearch}    
+    Input Text    ${NameSearch}    ${InputSearchPackage}
+    
+StartandEnd_Package    
+    Click Button    ${Date}
+    Click Button    ${Package-Start}
+    Click Button    ${Package-End}
 
 InputNamePackage2
     Click Button    ${SearchPackage}

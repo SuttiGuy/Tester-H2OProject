@@ -1,27 +1,22 @@
 *** Variables ***
 ${BROWSER}     Edge
-${URL}         http://localhost:5173
-${GetStart}    id=GetStarted
-${Login}       id=Login
-${Email}       name=email
-${Password}    name=password 
-${UserEmail}        guy.guy0205245@gmail.com
-${UserPassword}    Guyza123!
+${URL}         http://18.140.2.235/
 
+${SearchPackage}    id=button-homestaySearch-noSelect
 ${NameSearch}         id=search-text
-${People2}             id=people-buttonHomstay
-${Adult2}              id=Increase[1]
-${Child2}              id=Increase[2]
-${Search}             id=search-Homestay
-
-${People}             id=people-buttonPackage
-${ADULT}              id=IncreasePeople
-${CHILD}              id=IncreaseChildren
-${ROOM}               id=IncreaseRoom
+${People}             id=people-buttonHomstay
+${Young}              id=Increase[1]
+${Child}              id=Increase[2]
 ${Date}               id=date-buttonHomstay
-${Date-Start}    xpath=//*[@id="homeStayDetail"]/div[1]/nav/div/div[2]/div/div/div/div[2]/div/div/div/div[2]/button[27]
-${Date-End}      xpath=//*[@id="homeStayDetail"]/div[1]/nav/div/div[2]/div/div/div/div[2]/div/div/div/div[2]/button[29]
-${Provine-HOMESTAY}    id=สุพรรณบุรี
-${Name-HOMESTAY}       id=detailCard-Home
-${Name-Room}           xpath=//*[@id="homeStayDetail"]/div[3]/div/a[3]
+${Date-Start}    xpath=//*[@id="Calendar"]/div/div[2]/div/div/div/div[2]/button[26]
+${Date-End}      xpath=//*[@id="Calendar"]/div/div[2]/div/div/div/div[2]/button[27]
+
+${Search}             id=search-Homestay
+${InputSearchProvince}    สุพรรณบุรี 
+${Detail-HomeStay}    id=Name-Homestay
+${Province-HomeStay}    xpath=//*[@id="detailCard-Homestay"]/div[3]/div/p
+
+${Room}    xpath=//*[@id="detailTypeRoom"]/div/div/div[2]/div
+${bookimg}    xpath=//*[@id="detailTypeRoom"]/div/div/div[2]/div/div[2]/div/div/div[4]/button
+
 ${SCREENSHOT_DIR}  ${OUTPUT DIR}/screenshots/ViewDetail

@@ -25,6 +25,7 @@ TC11001 ดูสถานะการจองที่แพ็คเกจ
     Click Booking
     Click bookingPackage
     Sleep    3s
+    Check Status 
     Scroll Element Into View    id=footer
     Capture Screenshot
     Close Browser
