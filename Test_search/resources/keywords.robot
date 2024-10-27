@@ -46,16 +46,6 @@ SortByPrice
     Click Element    ${Sort}
     Click Element    ${PriceHightToLow}
 
-SortByHomestays Recommend
-    Sleep    3s
-    Scroll Element Into View    id=ทั้งหมด[P]
-    Click Element    ${SortByProvince}
-
-SortByPackage Recommend
-    Sleep    3s
-    Scroll Element Into View    id=footer
-    Click Element    ${SortByType}
-
 Capture Screenshot
     Sleep    5s
     ${timestamp}    Get Time    epoch

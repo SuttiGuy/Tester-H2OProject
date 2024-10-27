@@ -6,7 +6,6 @@ LoginUser
     Input Text    ${Password}    ${UserPassword}
     Click Element    ${Login}
     Sleep    5s
-
 Search by Homestay
     Click Button    ${People}
     Click Button    ${Young}
@@ -30,7 +29,7 @@ Search by Package
     Click Button    ${Package-End}
     Click Element    ${Search}
     Sleep    5s
-    Click Element    ${Homestay} 
+    Click Element    ${Package} 
 
 Choose the room booking
     Sleep    5s
@@ -45,7 +44,7 @@ Choose Package
     Click Button    ${bookingPackage}
     
 Payment
-    Wait Until Element Is Visible    ${CardNumber}    4s
+    Wait Until Element Is Visible    ${CardNumber}    
     Input Text    ${CardNumber}    4242 4242 4242 4242
     Input Text    ${CardExpiry}    0528
     Input Text    ${CardCvc}       121
@@ -59,17 +58,10 @@ Alert
     Click Button    ${Alert}
 
 
-Pay
-    Wait Until Element Is Visible    ${CardNumber}    4s
-    Input Text    ${CardNumber}    4242 4242 4242 4242
-    Input Text    ${CardExpiry}    0528
-    Input Text    ${CardCvc}       121
-    Input Text    ${CardName}      Suttiguy  
-    Scroll Element Into View    ${Pay} 
-    Click Element     ${Pay} 
 
 check Payment
-    Wait Until Element Is Enabled    ${Checkbill}    5s
+    Sleep    5s
+    Wait Until Element Is Enabled    ${Checkbill}
     Element Should Be Visible     ${Checkbill}    การชำระเงินของคุณได้รับการดำเนินการเรียบร้อยแล้ว
 
 Capture Screenshot

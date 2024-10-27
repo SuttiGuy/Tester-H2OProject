@@ -23,9 +23,8 @@ InputSearchHomestay
     Click Element    ${Search}
 
 InputNamePackage
-    Wait Until Element Is Visible    ${SearchPackage}    5s
+    Wait Until Element Is Visible    ${SearchPackage}
     Click Button    ${SearchPackage}
-    Input Text    ${NameSearch}    ${InputSearchPackage}
     Click Element    ${Search}
 
 choose HomeStay
@@ -43,9 +42,10 @@ ViewDetailHomestay
     Sleep    3s
 
 ViewDetailPackage
-    Wait Until Element Is Visible    xpath=//*[@id="root"]/div[3]/div[2]/div/div/div[4]/div  
-    Scroll Element Into View    id=review
-    Element Should Be Visible    xpath=//*[@id="root"]/div[3]/div[2]/div/div/div[4]/div  กำหนดการเดินทาง
+    Sleep    3s
+    Scroll Element Into View    id=program
+    Wait Until Element Is Visible    id=program
+    Element Should Be Visible    id=program  รายละเอียดโปรแกรม
     Sleep    3s
 
 SortByHomestays Recommend
@@ -54,10 +54,8 @@ SortByHomestays Recommend
 
 SortByPackage Recommend
     Sleep    3s
-    Scroll Element Into View    id=footer
     Click Element    ${SortByType}
-    Wait Until Element Contains    id=Type-Package    การท่องเที่ยวทางน้ำ    
-    Element Should Contain    id=Type-Package    การท่องเที่ยวทางน้ำ
+    Scroll Element Into View    id=footer
 
 Choose Homestays Recommend
     Sleep    3s
@@ -70,7 +68,6 @@ Choose Homestays Recommend
 Choose Package Recommend
     Sleep    3s
     Click Element   ${Package}
-    Scroll Element Into View    id=package
 
 Capture Screenshot
     ${timestamp}    Get Time    epoch

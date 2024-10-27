@@ -22,7 +22,7 @@ TC12002 การชำระเงินแพ็คเกจ ผ่าน Visa
     LoginUser
     Search by Package
     Choose Package
-    Pay
+    Payment
     check Payment
     Capture Screenshot
     Close Browser

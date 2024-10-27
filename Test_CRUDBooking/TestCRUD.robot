@@ -17,7 +17,7 @@ TC11001 ดูสถานะการจองที่พัก
     Capture Screenshot
     Close Browser
 
-TC11001 ดูสถานะการจองที่แพ็คเกจ
+TC11002 ดูสถานะการจองที่แพ็คเกจ
     Open Browser    ${URL}    ${BROWSER}
     Maximize Browser Window
     LoginUser

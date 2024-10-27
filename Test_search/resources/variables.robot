@@ -30,9 +30,6 @@ ${id=PriceLowToHight}    id=PriceLowToHight
 ${id=StarHightToLow}    id=StarHightToLow
 ${id=StarLowToHight}    id=StarLowToHight
 
-${SortByProvince}    id=สุพรรณบุรี
-${SortByType}    id=ทางน้ำ
-
 
 ${SCREENSHOT_DIR}  ${OUTPUT DIR}/screenshots/Search
 ${Detail}        xpath=//*[@id="main-search"]/div[3]/div/div/span

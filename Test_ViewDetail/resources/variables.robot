@@ -22,7 +22,7 @@ ${InputSearchPackage}    สัมผัสประวัติศาสตร�
 
 ${Homestay}    xpath=//*[@id="root"]/div[3]/div[2]/div[1]/div[2]/div[3]/div
 ${SortByType}    id=ทางน้ำ
-${Package}    xpath=//*[@id="root"]/div[3]/div[2]/div[2]/div[2]/div[1]
+${Package}    xpath=//*[@id="root"]/div[3]/div[2]/div[2]/div[2]/div[3]
 
 
 ${SCREENSHOT_DIR}  ${OUTPUT DIR}/screenshots/ViewDetail

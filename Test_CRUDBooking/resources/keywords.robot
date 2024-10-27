@@ -22,8 +22,8 @@ Click bookingPackage
     Click Button    ${Package} 
 
 Check Status
-    Wait Until Element Is Visible    ${Status}    15s
-    Element Should Contain    ${Status}    Confirmed
+    Wait Until Element Is Visible    ${StatusPackage}    15s
+    Element Should Contain    ${StatusPackage}    Confirmed
 
 
 Capture Screenshot

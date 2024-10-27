@@ -1,6 +1,6 @@
 *** Variables ***
 ${BROWSER}     Edge
-${URL}         https://h2-o-project-two.vercel.app/
+${URL}         http://47.129.247.9/
 ${GetStart}    id=GetStarted
 ${Login}       id=Login
 ${Email}       name=email
@@ -13,14 +13,14 @@ ${People}             id=people-buttonHomstay
 ${Young}              id=Increase[1]
 ${Child}              id=Increase[2]
 ${Date}               id=date-buttonHomstay
-${Date-Start}    xpath=//*[@id="Calendar"]/div/div[2]/div/div/div/div[2]/button[19]
-${Date-End}      xpath=//*[@id="Calendar"]/div/div[2]/div/div/div/div[2]/button[20]
+${Date-Start}    xpath=//*[@id="Calendar"]/div/div[2]/div/div/div/div[2]/button[32]
+${Date-End}      xpath=//*[@id="Calendar"]/div/div[2]/div/div/div/div[2]/button[33]
 ${SelectPackage}    id=button-homestaySearch-noSelect
-${Package-Start}    xpath=//*[@id="Calendar"]/div/div[2]/div/div/div/div[2]/button[12]
-${Package-End}      xpath=//*[@id="Calendar"]/div/div[2]/div/div/div/div[2]/button[14]
+${Package-Start}    xpath=//*[@id="Calendar"]/div/div[2]/div/div/div/div[2]/button[33]
+${Package-End}      xpath=//*[@id="Calendar"]/div/div[2]/div/div/div/div[2]/button[34]
 ${Search}             id=search-Homestay
 ${Homestay}           id=default-carousel
-${Package}            id=image-Package
+${Package}            xpath=//*[@id="default-carousel"]/div/div[1]/img
 
 ${Scroll}             xpath=//*[@id="detailTypeRoom"]/div/div/div[2]/div
 ${ScrollPackage}      xpath=//*[@id="root"]/div[3]/div[2]/div/div/div[4]
