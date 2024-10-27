@@ -1,6 +1,6 @@
 *** Variables ***
 ${BROWSER}    Edge
-${URL}        https://h2-o-project-two.vercel.app/
+${URL}        http://47.129.247.9/
 
 ${SearchPackage}    id=button-homestaySearch-noSelect
 ${NameSearch}         id=search-text
@@ -8,21 +8,30 @@ ${People}             id=people-buttonHomstay
 ${Young}              id=Increase[1]
 ${Child}              id=Increase[2]
 ${Date}               id=date-buttonHomstay
-${Date-Start}    xpath=//*[@id="Calendar"]/div/div[2]/div/div/div/div[2]/button[26]
-${Date-End}      xpath=//*[@id="Calendar"]/div/div[2]/div/div/div/div[2]/button[27]
-${Package-Start}    xpath=//*[@id="Calendar"]/div/div[2]/div/div/div/div[2]/button[25]
+${Date-Start}    xpath=//*[@id="Calendar"]/div/div[2]/div/div/div/div[2]/button[28]
+${Date-End}      xpath=//*[@id="Calendar"]/div/div[2]/div/div/div/div[2]/button[29]
+${Package-Start}    //*[@id="Calendar"]/div/div[2]/div/div/div/div[2]/button[28]
 ${Package-End}      xpath=//*[@id="Calendar"]/div/div[2]/div/div/div/div[2]/button[32]
 
 
+
 ${Search}             id=search-Homestay
-${InputSearchProvince}    สุพรรณบุรี 
+${InputSearchProvince}    ราชบุรี 
 ${InputSearchHomestay}    บ้านปายดิน
 ${InputSearchProvincePackage}    นครปฐม
-${InputSearchPackage}    ไหว้พระ
+${InputSearchPackage}    สัมผัสประวัติศาสตร์
 ${Detail-HomeStay}    id=Name-Homestay
 ${Province-HomeStay}    xpath=//*[@id="detailCard-Homestay"]/div[3]/div/p
 ${Detail-Package}    id=detailCard-Package
 
+${Sort}    id=sort-buttonPackage
+${PriceHightToLow}    id=PriceHightToLow
+${id=PriceLowToHight}    id=PriceLowToHight
+${id=StarHightToLow}    id=StarHightToLow
+${id=StarLowToHight}    id=StarLowToHight
+
+${SortByProvince}    id=สุพรรณบุรี
+${SortByType}    id=ทางน้ำ
 
 
 ${SCREENSHOT_DIR}  ${OUTPUT DIR}/screenshots/Search

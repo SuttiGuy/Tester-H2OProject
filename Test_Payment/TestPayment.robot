@@ -25,7 +25,7 @@ TC12002 การชำระเงินแพ็คเกจ ผ่าน Visa
     Pay
     check Payment
     Capture Screenshot
-     Close Browser
+    Close Browser
 
 TC12003 การชำระเงินที่พัก กรณีที่อยากเช่าห้องเพิ่มในวันเดียวกัน
     Open Browser    ${URL}    ${BROWSER} 

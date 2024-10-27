@@ -6,22 +6,41 @@ Resource    resources/keywords.robot
 Library    XML
 
 *** Test Cases ***
-TC3001 ดูรายละเอียดที่พัก จากการค้นหาจากชื่อที่พัก
-    Open Browser    ${URL}    ${BROWSER}
-    Maximize Browser Window 
-    DefinePeople
-    StartandEnd_Date
-    InputNameProvince
-    choose HomeStay
-    ViewDetail
+# TC3001 ดูรายละเอียดที่พัก จากการค้นหาจากชื่อที่พัก
+#     Open Browser    ${URL}    ${BROWSER}
+#     Maximize Browser Window 
+#     DefinePeople
+#     StartandEnd_Date
+#     InputSearchHomestay
+#     Choose HomeStay
+#     ViewDetailHomestay
+#     Capture Screenshot
+#     Close Browser
+
+# TC3002 ดูรายละเอียดแพ็คเกจ จากการค้นหาจากชื่อแพ็คเกจ
+#     Open Browser    ${URL}    ${BROWSER}
+#     Maximize Browser Window 
+#     DefinePeople
+#     StartandEnd_Package  
+#     InputNamePackage
+#     Choose Package
+#     ViewDetailPackage
+#     Capture Screenshot
+#     Close Browser
+TC3003 ค้นหาที่พัก โดยกรองจาก Homestays Recommend
+    Open Browser    ${URL}    ${BROWSER} 
+    Maximize Browser Window
+    SortByHomestays Recommend
+    Choose Homestays Recommend
+    ViewDetailHomestay
     Capture Screenshot
     Close Browser
 
-# TC3002 ดูรายละเอียดห้องพัก จากการกรอกจากจังหวัด
-#     Open Browser    ${URL}    ${BROWSER}
-#     Maximize Browser Window 
-
-TC3001 ดูรายละเอียดที่พัก จากการกรองที่พัก
-    Open Browser    ${URL}    ${BROWSER}
+TC3004 ค้นหาที่พัก โดยกรองจาก Package Recommend
+    Open Browser    ${URL}    ${BROWSER} 
     Maximize Browser Window
-    
+    SortByPackage Recommend
+    Choose Package Recommend
+    ViewDetailPackage
+    Capture Screenshot 
+    Close Browser

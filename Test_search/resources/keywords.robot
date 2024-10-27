@@ -1,5 +1,6 @@
 *** Keywords ***
 DefinePeople
+    Sleep    3s
     Click Button    ${People}
     Click Button    ${Young}
 
@@ -10,18 +11,15 @@ StartandEnd_Date
 
 InputNameProvince
     Wait Until Element Is Visible    ${NameSearch}    2s
-    Click Element    ${NameSearch}
     Input Text      ${NameSearch}     ${InputSearchProvince} 
 
 InputNameHomeStay
     Wait Until Element Is Visible    ${NameSearch}    2s
-    Click Element    ${NameSearch}
     Input Text      ${NameSearch}    ${InputSearchHomestay}
 
 InputNameHomeStay2
-    Wait Until Element Is Visible    ${NameSearch}    2s
-    Click Element    ${NameSearch}
-    Input Text      ${NameSearch}    หมู่บ้านโคกระโหลก
+    Wait Until Element Is Visible    ${NameSearch}
+    Input Text      ${NameSearch}    โฮมสเตย์ไปกันใหญ่
 
 InputNameProvincePackage
     Wait Until Element Is Visible    ${SearchPackage}    5s
@@ -33,14 +31,30 @@ InputNamePackage
     Click Button    ${SearchPackage}
     Input Text    ${NameSearch}    ${InputSearchPackage}
     
+InputNamePackage2
+    Wait Until Element Is Visible    ${SearchPackage}    5s
+    Click Button    ${SearchPackage}
+    Input Text    ${NameSearch}    ฝึกทำยำเนื้อ
+
 StartandEnd_Package    
     Click Button    ${Date}
     Click Button    ${Package-Start}
     Click Button    ${Package-End}
 
-InputNamePackage2
-    Click Button    ${SearchPackage}
-    Input Text    ${NameSearch}    ท่องเที่ยวริมทะเลไปหาปูกุ้งหมึก
+SortByPrice
+    Scroll Element Into View    ${SearchPackage}
+    Click Element    ${Sort}
+    Click Element    ${PriceHightToLow}
+
+SortByHomestays Recommend
+    Sleep    3s
+    Scroll Element Into View    id=ทั้งหมด[P]
+    Click Element    ${SortByProvince}
+
+SortByPackage Recommend
+    Sleep    3s
+    Scroll Element Into View    id=footer
+    Click Element    ${SortByType}
 
 Capture Screenshot
     Sleep    5s

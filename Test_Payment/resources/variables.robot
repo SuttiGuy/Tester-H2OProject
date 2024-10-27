@@ -1,6 +1,6 @@
 *** Variables ***
 ${BROWSER}     Edge
-${URL}         http://18.140.2.235/
+${URL}         https://h2-o-project-two.vercel.app/
 ${GetStart}    id=GetStarted
 ${Login}       id=Login
 ${Email}       name=email

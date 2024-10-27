@@ -1,6 +1,6 @@
 *** Variables ***
 ${BROWSER}     Edge
-${URL}         http://18.140.2.235/
+${URL}         http://47.129.247.9/
 ${GetStart}    id=GetStarted
 ${Login}       id=Login
 ${Email}       name=email
